@@ -27,12 +27,7 @@
     <bean id="service" class="org.javabrains.aop.service.Service">
         <constructor-arg>
             <map>
-                <entry key="aaa">
-                    <list>
-                        <value>aaa</value>
-                        <value>bbb</value>
-                    </list>
-                </entry>
+                <entry key="aaa" value="['aaa', 'bbb']"/>
             </map>
         </constructor-arg>
     </bean>
