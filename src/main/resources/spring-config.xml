@@ -2,12 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
  		http://www.springframework.org/schema/aop
  		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+    <aop:aspectj-autoproxy/>
 
     <bean id="circle" class="org.javabrains.aop.model.Circle">
         <property name="name" value="Circle name"/>
@@ -21,5 +21,7 @@
         <property name="circle" ref="circle"/>
         <property name="triangle" ref="triangle"/>
     </bean>
+
+    <bean name="loggingAspect" class="org.javabrains.aop.aspect.LoggingAspect"/>
 
 </beans>
