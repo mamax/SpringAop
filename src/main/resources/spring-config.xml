@@ -9,19 +9,27 @@
  		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
     <aop:aspectj-autoproxy/>
 
-    <bean id="circle" class="org.javabrains.aop.model.Circle">
-        <property name="name" value="Circle name"/>
-    </bean>
+    <!--<bean id="circle" class="org.javabrains.aop.model.Circle">-->
+        <!--<property name="name" value="Circle name"/>-->
+    <!--</bean>-->
 
-    <bean id="triangle" class="org.javabrains.aop.model.Triangle">
-        <property name="name" value="Triangle name"/>
-    </bean>
+    <!--<bean id="triangle" class="org.javabrains.aop.model.Triangle">-->
+        <!--<property name="name" value="Triangle name"/>-->
+    <!--</bean>-->
 
-    <bean name="shapeService" class="org.javabrains.aop.service.ShapeService">
-        <property name="circle" ref="circle"/>
-        <property name="triangle" ref="triangle"/>
-    </bean>
+    <!--<bean name="shapeService" class="org.javabrains.aop.service.ShapeService">-->
+        <!--<property name="circle" ref="circle"/>-->
+        <!--<property name="triangle" ref="triangle"/>-->
+    <!--</bean>-->
 
-    <bean name="loggingAspect" class="org.javabrains.aop.aspect.LoggingAspect"/>
+    <!--<bean name="loggingAspect" class="org.javabrains.aop.aspect.LoggingAspect"/>-->
+
+    <bean id="service" class="org.javabrains.aop.service.Service">
+        <constructor-arg>
+            <map>
+                <entry key="ccc" value="#{{'aaa', 'bbb'}}"/>
+            </map>
+        </constructor-arg>
+    </bean>
 
 </beans>
