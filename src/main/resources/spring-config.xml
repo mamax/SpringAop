@@ -27,7 +27,12 @@
     <bean id="service" class="org.javabrains.aop.service.Service">
         <constructor-arg>
             <map>
-                <entry key="ccc" value="#{{'aaa', 'bbb'}}"/>
+                <entry key="aaa">
+                    <list>
+                        <value>aaa</value>
+                        <value>bbb</value>
+                    </list>
+                </entry>
             </map>
         </constructor-arg>
     </bean>
